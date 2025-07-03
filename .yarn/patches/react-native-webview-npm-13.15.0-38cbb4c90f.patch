@@ -1,0 +1,15 @@
+diff --git a/android/src/newarch/com/reactnativecommunity/webview/RNCWebViewManager.java b/android/src/newarch/com/reactnativecommunity/webview/RNCWebViewManager.java
+index e20ae03bf1187f90d1eddce9203ac023ef00062f..9a0cc9b5d224552752f3de91ecd13f507516a028 100644
+--- a/android/src/newarch/com/reactnativecommunity/webview/RNCWebViewManager.java
++++ b/android/src/newarch/com/reactnativecommunity/webview/RNCWebViewManager.java
+@@ -62,6 +62,10 @@ public class RNCWebViewManager extends ViewGroupManager<RNCWebViewWrapper>
+         return mRNCWebViewManagerImpl.createViewInstance(context);
+     }
+ 
++    protected RNCWebViewWrapper createViewInstance(@NonNull ThemedReactContext context, @NonNull RNCWebView view) {
++      return mRNCWebViewManagerImpl.createViewInstance(context, view);
++    }
++
+     @Override
+     @ReactProp(name = "allowFileAccess")
+     public void setAllowFileAccess(RNCWebViewWrapper view, boolean value) {
